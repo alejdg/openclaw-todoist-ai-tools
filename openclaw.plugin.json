@@ -1,0 +1,75 @@
+{
+  "id": "todoist-ai-tools",
+  "name": "Todoist AI",
+  "description": "Add tools for agents to interact with Todoist using @doist/todoist-mcp",
+  "version": "2.0.0",
+  "skills": ["./skills"],
+  "activation": {
+    "onStartup": true
+  },
+  "contracts": {
+    "tools": [
+      "todoist_add_tasks",
+      "todoist_update_tasks",
+      "todoist_complete_tasks",
+      "todoist_uncomplete_tasks",
+      "todoist_reschedule_tasks",
+      "todoist_find_tasks",
+      "todoist_find_tasks_by_date",
+      "todoist_find_completed_tasks",
+      "todoist_add_projects",
+      "todoist_update_projects",
+      "todoist_find_projects",
+      "todoist_add_sections",
+      "todoist_update_sections",
+      "todoist_find_sections",
+      "todoist_add_goals",
+      "todoist_update_goals",
+      "todoist_complete_goals",
+      "todoist_find_goals",
+      "todoist_link_goal_tasks",
+      "todoist_add_comments",
+      "todoist_update_comments",
+      "todoist_find_comments",
+      "todoist_add_labels",
+      "todoist_update_labels",
+      "todoist_find_labels",
+      "todoist_add_filters",
+      "todoist_update_filters",
+      "todoist_find_filters",
+      "todoist_find_project_collaborators",
+      "todoist_manage_assignments",
+      "todoist_find_activity",
+      "todoist_get_overview",
+      "todoist_get_productivity_stats",
+      "todoist_get_project_health",
+      "todoist_get_project_activity_stats",
+      "todoist_analyze_project_health",
+      "todoist_get_workspace_insights",
+      "todoist_list_workspaces",
+      "todoist_delete_object",
+      "todoist_reorder_objects",
+      "todoist_user_info",
+      "todoist_search",
+      "todoist_fetch",
+      "todoist_view_attachment"
+    ]
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": true,
+    "properties": {
+      "apiKeys": {
+        "type": "object",
+        "description": "Mapping of agent ID to Todoist API key. Use 'default' as a fallback key.",
+        "additionalProperties": { "type": "string" }
+      }
+    }
+  },
+  "uiHints": {
+    "apiKeys": {
+      "label": "Todoist API Keys (per agent)",
+      "sensitive": true
+    }
+  }
+}
