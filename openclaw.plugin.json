@@ -2,7 +2,7 @@
   "id": "todoist-ai-tools",
   "name": "Todoist AI",
   "description": "Add tools for agents to interact with Todoist using @doist/todoist-mcp",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "skills": ["./skills"],
   "activation": {
     "onStartup": true
